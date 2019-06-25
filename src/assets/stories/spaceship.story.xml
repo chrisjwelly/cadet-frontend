@@ -515,7 +515,7 @@
 	</MAP>
 	<QUEST id="intro">
 	    <EFFECTS>
-	    	<LOCATION name="yourRoom" skin="empty" clear="true">
+	    	<LOCATION name="yourRoom" skin="empty" clear="false">
 	    	</LOCATION>
 	    </EFFECTS>
 	    <SEQUENCE>
