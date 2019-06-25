@@ -97,7 +97,7 @@
                			</EXTERNAL_ACTION>
 				<SEQUENCE>
 					<DIALOGUE>
-						<SPEECH speaker="hartin-menz" expression="normal" audience="you" mode="normal">Hello, {playerName}! Looks like you found my office! Welcome! Feel free to look around, but take care not to break anything.</SPEECH>
+						<SPEECH speaker="hartin-menz" expression="normal" audience="you" mode="normal">Hello, {playerName}! I have changed this line</SPEECH>
 					</DIALOGUE>
 				</SEQUENCE>
 			</OBJECT>
