@@ -581,42 +581,12 @@
 	    </EFFECTS>
 	    <SEQUENCE>
             <LOCATION name="galaxy" skin="normal"></LOCATION>
-            <NARRATION>The year is 1101 A.E.</NARRATION>
-            <NARRATION>Exponential advances in technology have allowed the human race to traverse light yearsâ€™ worth of distances in mere hours.</NARRATION>
-            <NARRATION>As Earthâ€™s population reached a breaking point, humans began to migrate across the galaxy, colonizing planets once thought uninhabitable, as well as making settlements on those with amicable alien life.</NARRATION>
-            <NARRATION>To supplement this rapid expansion, large space stations scattered throughout the solar systems began to emerge, serving as hubs for different human needs.</NARRATION>
-            <NARRATION>Nestled deep in the Kepler-62 system, a prestigious facility of learning exists, claiming fame as perhaps the most rigorous inter-galactic educational institute in the universe.</NARRATION>
-            <NARRATION>Here, students learn how to harness the power of an invisible force known as the Source, a hidden energy that lets one manipulate the things around them and perform great feats.</NARRATION>
-            <NARRATION>Today, you have enrolled inâ€¦</NARRATION>
+            <NARRATION>The year is 1101 A.E. Skip me</NARRATION>
             <POPUP>
                 <IMAGE>sourceAcademy.png</IMAGE>
                 <NARRATION>THE SOURCE ACADEMY</NARRATION>
             </POPUP>
                 <LOCATION name="telebay" skin="normal"></LOCATION>
-            <DIALOGUE>
-                <SPEECH speaker="you" expression="tired">Whewâ€¦ That was a long trip. It feels like I was on that shuttle for a thousand years.</SPEECH>
-                <SPEECH speaker="you">
-                    I guess this is the Source Academy. Itâ€™s much bigger than my high school back on Earth. Itâ€™s hard to believe this is a space station.
-                </SPEECH>
-            </DIALOGUE>
-            <NARRATION>
-                The teleportation bay is empty, as far as you can see.
-            </NARRATION>
-            <NARRATION>
-                 You must have been one of the last to arrive, but all the shuttle services before this were fully-booked.
-            </NARRATION>
-            <NARRATION>
-                If only you hadnâ€™t procrastinated so muchâ€¦
-            </NARRATION>
-            <DIALOGUE>
-                <SPEECH speaker="you">Never mind that!</SPEECH>
-                <SPEECH speaker="you">Now, the message I got last week says Iâ€™m supposed to find my dorm room the minute I get here...</SPEECH>
-                <SPEECH speaker="scottie" expression="happy">Oh hi, you must be our last recruit! Everyone else is already getting settled in.</SPEECH>
-            </DIALOGUE>
-            <NARRATION>The strange alien voice startles you. You were so preoccupied you hadn't even noticed the telebay's operator. This is your first time meeting an alien in person. You couldn't help but gawk at him, lost for words.</NARRATION>
-            <DIALOGUE>
-                <SPEECH speaker="scottie" expression="happy">If you exit through that door, the elevator will take you up to the hallway. From there you can access the rest of the ship. Follow the sign at the end of the corridor and you'll find the student quarters. Off you go now!</SPEECH>
-            </DIALOGUE>
             <DIALOGUE>
                 <SPEECH speaker="you">
                 Oh, um, thanks!
@@ -629,10 +599,6 @@
                 </OBJECT>
             </PAUSE>
             <LOCATION name="hallway" skin="normal"></LOCATION>
-            <NARRATION>You exit the elevator into a long hallway leading to various rooms. You look around for a sign leading to the student quarters.</NARRATION>
-            <DIALOGUE>
-                <SPEECH speaker="you">Ah, there it is! I can't wait to unload my stuff. It's killing my back. I guess I should've packed lighter.</SPEECH>
-            </DIALOGUE>
             <PAUSE>
                 <OBJECT name="door" skin="hallway-yourRoom" x="1633" y="97">
                     <CONTINUE></CONTINUE>
@@ -649,8 +615,6 @@
             </NARRATION>
             <LOCATION name="yourRoom" skin="empty"></LOCATION>
             <NARRATION>...revealing your room inside</NARRATION>
-            <PAUSE duration="2" autocontinue="true"></PAUSE>
-            <NARRATION>Neat! Better start unpacking and settling in!</NARRATION>
 	    </SEQUENCE>
             <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
