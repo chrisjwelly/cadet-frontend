@@ -40,19 +40,26 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     },
     pickUpCollectible: function () { },
     playSound: function (name) {
-      console.log("playSound")
-      if (name.substring(0, 4) === "test-")
-        if (name.substring(5, 9) === "roll-")
-          name = name + generate_rand(3);
-        var sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
-      else
-        var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
+      var sound;
+      if (name.substring(0, 5) === "test-") {
+        if (name.substring(5, 10) === "roll-") {
+          name = name + randomIntFromInterval(1,3);
+        }
+        console.log("Name: " + name);
+        sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
+      } else {
+        sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
+      }
       
       if (sound) {
         sound.play();
       }
     }
   };
+
+  function randomIntFromInterval(min,max) {// min and max included
+      return Math.floor(Math.random()*(max-min+1)+min);
+  }
 
   function openWristDevice() {
     window.open(LINKS.LUMINUS);
