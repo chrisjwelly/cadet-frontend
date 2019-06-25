@@ -43,9 +43,9 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
       console.log("playSound")
       var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
       var soundTest = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
-      if (sound) {
+      if (sound.readyState === 4) {
         sound.play();
-      } else if (soundTest) {
+      } else if (soundTest.readyState === 4) {
         soundTest.play();
       }
     }
