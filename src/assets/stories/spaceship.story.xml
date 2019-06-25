@@ -105,6 +105,9 @@
 				<SEQUENCE>
 					<POPUP>
 						<IMAGE>mysteryCube.png</IMAGE>
+						<EXTERNAL_ACTION name="playSound">
+							<ARGUMENT>door</ARGUMENT>
+						</EXTERNAL_ACTION>
 						<NARRATION>The cube looks out of place in Grandmaster Hartin-Menz's office. There is an unsettling red light in the middle of each face that seems like its watching you all the time. Creepy... Grandmaster Hartin says you can keep it. Not surprising. Wouldn't want that in my office either.</NARRATION>
 					</POPUP>
 				</SEQUENCE>
