@@ -355,45 +355,6 @@
 			</OBJECT>
 		</LOCATION>
 		<LOCATION name="greatHall" skin="normal">
-			<OBJECT name="gh-foodArea" skin="normal" x="421" y="431"></OBJECT>
-			<OBJECT name="gh-upstairs" skin="normal" x="1561" y="305"></OBJECT>
-			<OBJECT name="gh-platform" skin="normal" x="1050" y="717"></OBJECT>
-			<OBJECT name="gh-elevator" skin="normal" x="1400" y="651"></OBJECT>
-			<OBJECT name="gh-ceilingWindows" skin="normal" x="795,0" y="0"></OBJECT>
-			<OBJECT name="gh-window" skin="normal" x="1206" y="0"></OBJECT>
-			<OBJECT name="gh-bgTable" skin="normal" x="666" y="781"></OBJECT>
-			<OBJECT name="gh-rtTable" skin="normal" x="1073" y="901"></OBJECT>
-			<OBJECT name="gh-reia" skin="normal" x="1753" y="629"></OBJECT>
-			<OBJECT name="gh-rtTableChair02" skin="normal" x="1442" y="810"></OBJECT>
-			<OBJECT name="gh-rtTableChair01" skin="normal" x="1144" y="826"></OBJECT>
-			<OBJECT name="gh-ruby" skin="normal" x="1177" y="672"></OBJECT>
-			<OBJECT name="gh-rtTableMash" skin="normal" x="1336" y="896"></OBJECT>
-			<OBJECT name="gh-rtTableRedCup" skin="normal" x="1323" y="999"></OBJECT>
-			<OBJECT name="gh-rtTablePlate" skin="normal" x="1397" y="1010"></OBJECT>
-			<OBJECT name="gh-faizal" skin="normal" x="1549" y="707"></OBJECT>
-			<OBJECT name="gh-rtTableBlueDrink" skin="normal" x="1491" y="940"></OBJECT>
-			<OBJECT name="gh-lfTableChair03" skin="normal" x="810" y="855"></OBJECT>
-			<OBJECT name="gh-lfTableChair02" skin="normal" x="154" y="799"></OBJECT>
-			<OBJECT name="gh-lfTableChair01" skin="normal" x="0" y="832"></OBJECT>
-			<OBJECT name="gh-lfTable" skin="normal" x="25" y="874"></OBJECT>
-			<OBJECT name="gh-lfTableDrink" skin="normal" x="430" y="939"></OBJECT>
-			<OBJECT name="gh-lfTablePlate" skin="normal" x="412" y="973"></OBJECT>
-			<OBJECT name="gh-lfTableSoup" skin="normal" x="310" y="982"></OBJECT>
-			<OBJECT name="gh-lfTableAshleyTray" skin="normal" x="396" y="875"></OBJECT>
-			<OBJECT name="gh-daniel" skin="normal" x="475" y="713"></OBJECT>
-			<OBJECT name="gh-ashley" skin="normal" x="326" y="559"></OBJECT>
-			<OBJECT name="gh-todaysSpecial" skin="normal" x="324" y="865">
-				<SEQUENCE>
-					<POPUP>
-						<IMAGE>todaysSpecial.png</IMAGE>
-						<NARRATION>Today's special: Primordial Soup! Try our chef's latest creation, filled with nutritious organic compounds to nourish your soul!</NARRATION>
-					</POPUP>
-				</SEQUENCE>
-			</OBJECT>
-			<OBJECT name="gh-haskell" skin="normal" x="830" y="523"></OBJECT>
-			<OBJECT name="gh-consoleByTheDoor" skin="normal" x="8" y="680"></OBJECT>
-			<OBJECT name="gh-cornerScreen" skin="normal" x="0" y="0"></OBJECT>
-
 			<OBJECT name="door" skin="greatHall" x="102" y="609">
 				<EXTERNAL_ACTION name="playSound">
                 	<ARGUMENT>door</ARGUMENT>
@@ -401,34 +362,6 @@
                 <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
 				<GOTO_LOCATION>hallway</GOTO_LOCATION>
 			</OBJECT>
-			<OBJECT name="gh-about" skin="normal" x="1057" y="136">
-				<EXTERNAL_ACTION name="openTemplate">
-					<!-- <ARGUMENT>about</ARGUMENT> -->
-					<ARGUMENT></ARGUMENT>
-				</EXTERNAL_ACTION>
-			</OBJECT>
-			
-			<!-- Commented away as comments/forum are not available -->
-			<!--
-			<OBJECT name="gh-forum" skin="normal" x="1041" y="585">
-				<EXTERNAL_ACTION name="openTemplate">
-					<ARGUMENT>forum</ARGUMENT>
-					<ARGUMENT>comments</ARGUMENT>
-				</EXTERNAL_ACTION>
-			</OBJECT> -->
-
-			<OBJECT name="gh-announcements" skin="normal" x="355" y="0">
-				<EXTERNAL_ACTION name="openTemplate">
-					<ARGUMENT>announcements</ARGUMENT>
-				</EXTERNAL_ACTION>
-			</OBJECT>
-
-			<!-- Commented away as leaderboard is not available -->
-			<!-- <OBJECT name="gh-leaderboard" skin="normal" x="127" y="0">
-				<EXTERNAL_ACTION name="openTemplate">
-					<ARGUMENT>leaderboard</ARGUMENT>
-				</EXTERNAL_ACTION>
-			</OBJECT> -->
 		</LOCATION>
 		<LOCATION name="classroom" skin="normal">
 			<OBJECT name="door" skin="classroom" x="159" y="350">
