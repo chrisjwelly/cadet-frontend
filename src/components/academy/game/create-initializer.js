@@ -41,12 +41,12 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     pickUpCollectible: function () { },
     playSound: function (name) {
       console.log("playSound")
-      var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
-      var soundTest = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
-      if (sound.readyState === 4) {
+
+      if (name.substring(0, 5) === "test-") 
+        var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
+      else var sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
+      if (sound) {
         sound.play();
-      } else if (soundTest.readyState === 4) {
-        soundTest.play();
       }
     }
   };
