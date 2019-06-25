@@ -514,6 +514,10 @@
 		</LOCATION>
 	</MAP>
 	<QUEST id="intro">
+	    <EFFECTS>
+	    	<LOCATION name="yourRoom" skin="empty" clear="true">
+	    	</LOCATION>
+	    </EFFECTS>
 	    <SEQUENCE>
             <LOCATION name="galaxy" skin="normal"></LOCATION>
             <NARRATION>The year is 1101 A.E. Skip me</NARRATION>
