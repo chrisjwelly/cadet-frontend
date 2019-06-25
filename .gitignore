@@ -22,3 +22,7 @@ terraform*
 .env.production.local
 
 npm-debug.log*
+
+# remove later
+package-lock.json
+package.json
