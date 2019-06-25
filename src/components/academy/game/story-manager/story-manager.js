@@ -123,7 +123,11 @@ export function loadStoryXML(storyXMLs, willSave, callback) {
       downloadRequestSent[curId] = true;
       $.ajax({
         type: 'GET',
-        url: Constants.storyXMLPath + curId + '.story.xml',
+        url: (curId === 'spaceship') 
+             ? 'https://raw.githubusercontent.com/chrisjwelly/cadet-frontend/game-sounds/src/assets/xml/spaceship.story.xml'
+             : (curId === 'mission-1')
+               ? 'https://raw.githubusercontent.com/chrisjwelly/cadet-frontend/game-sounds/src/assets/xml/mission-1.story.xml'
+               : Constants.storyXMLPath + curId + '.story.xml',
         dataType: 'xml',
         success: function(xml) {
           var story = xml.children[0];

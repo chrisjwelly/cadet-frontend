@@ -17,6 +17,7 @@ export function getExternalOverlay() {
 }
 
 export function playExternalAction(node) {
+  console.log("playExternalAction in external-manager.js");
   if (node.tagName != 'EXTERNAL_ACTION') {
     return;
   }
@@ -29,9 +30,11 @@ export function playExternalAction(node) {
     while (child) {
       if (child.tagName == 'ARGUMENT') {
         argList.push(child.textContent);
+        console.log("ARGUMENT: " + child.textContent);
       }
       child = child.nextElementSibling;
     }
   }
+  console.log("externalHooks[node.getAttribute('name'): " + externalHooks[node.getAttribute('name')] );
   externalHooks[node.getAttribute('name')].apply(this, argList);
 }

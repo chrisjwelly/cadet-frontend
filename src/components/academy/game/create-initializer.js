@@ -40,7 +40,10 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     },
     pickUpCollectible: function () { },
     playSound: function (name) {
-      var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
+      console.log("playSound")
+      var sound = (name === 'hmWelcome2') 
+                  ? new Audio('https://raw.githubusercontent.com/chrisjwelly/cadet-frontend/game-sounds/src/assets/sounds/hmWelcome2.mp3')
+                  : new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
       if (sound) {
         sound.play();
       }
@@ -80,6 +83,7 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     if (story === 'contest-3.3') {
       alert('Next contest: 3D Rune')
     } else if (story === 'mission-1') {
+      console.log("Initialize else if story === mission-1 in create-initializer.js");
       StoryXMLPlayer.loadStory('spaceship', function () {
         StoryXMLPlayer.loadStory('mission-1', function () { })
       })
