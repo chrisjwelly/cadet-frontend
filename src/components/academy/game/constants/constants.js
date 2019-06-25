@@ -15,12 +15,14 @@ module.exports = {
   glowDistance: 30,
   textSpeed: 0.02,
   storyXMLPath: ASSETS_HOST + 'stories/',
+  storyXMLPathTest: ASSETS_HOST_TEST + 'stories/',
   locationPath: ASSETS_HOST + 'locations/',
   objectPath: ASSETS_HOST + 'objects/',
   imgPath: ASSETS_HOST + 'images/',
   avatarPath: ASSETS_HOST + 'avatars/',
   uiPath: ASSETS_HOST + 'UI/',
   soundPath: ASSETS_HOST + 'sounds/',
+  soundPathTest: ASSETS_HOST_TEST + 'sounds/',
   fadeTime: 0.3,
   nullFunction: function() {}
 };
