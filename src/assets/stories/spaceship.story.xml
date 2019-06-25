@@ -93,7 +93,7 @@
 			</OBJECT>
 			<OBJECT name="hartin-menz" skin="officeSitting" x="754" y="201">
 				<EXTERNAL_ACTION name="playSound">
-                			<ARGUMENT>hmWelcome2</ARGUMENT>
+                			<ARGUMENT>test-hmWelcome2</ARGUMENT>
                			</EXTERNAL_ACTION>
 				<SEQUENCE>
 					<DIALOGUE>

@@ -42,7 +42,7 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     playSound: function (name) {
       console.log("playSound")
 
-      if (name.substring(0, 5) === "test-") 
+      if (name.substring(0, 5) !== "test-") 
         var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
       else var sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
       if (sound) {
