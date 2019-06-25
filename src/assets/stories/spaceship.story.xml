@@ -93,7 +93,7 @@
 			</OBJECT>
 			<OBJECT name="hartin-menz" skin="officeSitting" x="754" y="201">
 				<EXTERNAL_ACTION name="playSound">
-                			<ARGUMENT>test-hmWelcome2</ARGUMENT>
+                			<ARGUMENT>test-roll-hmWelcome</ARGUMENT>
                			</EXTERNAL_ACTION>
 				<SEQUENCE>
 					<DIALOGUE>
@@ -579,8 +579,7 @@
 	</MAP>
 	<QUEST id="intro">
 	    <EFFECTS>
-	    	<LOCATION name="yourRoom" skin="empty" clear="true">
-	    	</LOCATION>
+	    	<LOCATION name="yourRoom" skin="empty" clear="true"> </LOCATION>
 	    </EFFECTS>
 	    <SEQUENCE>
             <LOCATION name="galaxy" skin="normal"></LOCATION>
@@ -589,27 +588,9 @@
                 <IMAGE>sourceAcademy.png</IMAGE>
                 <NARRATION>THE SOURCE ACADEMY</NARRATION>
             </POPUP>
-                <LOCATION name="telebay" skin="normal"></LOCATION>>
-            <NARRATION>You hastily make for the door, feeling a little embarassed.</NARRATION>
-            <PAUSE>
-                <OBJECT name="door" skin="telebay" x="222" y="241">
-                    <CONTINUE></CONTINUE>
-                </OBJECT>
-            </PAUSE>
-            <LOCATION name="hallway" skin="normal"></LOCATION>
-            <PAUSE>
-                <OBJECT name="door" skin="hallway-yourRoom" x="1633" y="97">
-                    <CONTINUE></CONTINUE>
-                </OBJECT>
-            </PAUSE>
-            <DIALOGUE>
-                <SPEECH speaker="you">Oh, here it is!</SPEECH>
-            </DIALOGUE>
-            <LOCATION name="yourRoom" skin="empty"></LOCATION>
 	    </SEQUENCE>
-            <COMPLETE_QUEST>intro</COMPLETE_QUEST>
+	    <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
 	</QUEST>
-        <QUEST></QUEST>
 </STORY>
 

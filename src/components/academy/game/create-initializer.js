@@ -41,10 +41,13 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     pickUpCollectible: function () { },
     playSound: function (name) {
       console.log("playSound")
-
-      if (name.substring(0, 5) !== "test-") 
+      if (name.substring(0, 4) === "test-")
+        if (name.substring(5, 9) === "roll-")
+          name = name + generate_rand(3);
+        var sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
+      else
         var sound = new Audio(ASSETS_HOST + 'sounds/' + name + '.mp3');
-      else var sound = new Audio(ASSETS_HOST_TEST + 'sounds/' + name + '.mp3');
+      
       if (sound) {
         sound.play();
       }
