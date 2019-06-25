@@ -607,17 +607,10 @@
                     <CONTINUE></CONTINUE>
                 </OBJECT>
             </PAUSE>
-            <NARRATION>
-                After navigating through long hallways and twisty corridors, you find yourself in front of a room inscribed with your full name.
-            </NARRATION>
             <DIALOGUE>
                 <SPEECH speaker="you">Oh, here it is!</SPEECH>
             </DIALOGUE>
-            <NARRATION>
-                Sensing your presence via face and voice-recognition, the door opens smoothly...
-            </NARRATION>
             <LOCATION name="yourRoom" skin="empty"></LOCATION>
-            <NARRATION>...revealing your room inside</NARRATION>
 	    </SEQUENCE>
             <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
