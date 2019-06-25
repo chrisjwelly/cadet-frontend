@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STORY id="spaceship" type="normal">
+	<MAP>
+		<LOCATION name="yourRoom" skin="normal">
+			<OBJECT name="yourLight02" skin="normal" x="441" y="243"></OBJECT>
+			<OBJECT name="yourLight01" skin="normal" x="373" y="136"></OBJECT>
+			<OBJECT name="yourCarpet" skin="normal" x="640" y="667"></OBJECT>
+			<OBJECT name="yourBed" skin="normal" x="372" y="514"></OBJECT>
+			<OBJECT name="yourLavalamp" skin="normal" x="686" y="463"></OBJECT>
+			<OBJECT name="yourPhotoFrame" skin="normal" x="587" y="479"></OBJECT>
+			<OBJECT name="yourAlarmClock" skin="normal" x="631" y="479"></OBJECT>
+			<OBJECT name="yourWindow" skin="normal" x="372" y="322"></OBJECT>
+			<OBJECT name="yourWaterJug" skin="normal" x="538" y="479"></OBJECT>
+			<OBJECT name="yourLaundry" skin="normal" x="373" y="578"></OBJECT>
+			<OBJECT name="yourShelf01" skin="normal" x="0" y="717"></OBJECT>
+			<OBJECT name="yourShelf02" skin="normal" x="261" y="625"></OBJECT>
+			<OBJECT name="yourBooksOnFloor" skin="normal" x="309" y="795"></OBJECT>
+			<OBJECT name="yourTable" skin="normal" x="1079" y="569"></OBJECT>
+			<OBJECT name="yourTv" skin="normal" x="1292" y="130"></OBJECT>
+			<OBJECT name="yourChair" skin="normal" x="932" y="549"></OBJECT>
+			<OBJECT name="yourKeyboard" skin="normal" x="1249" y="617"></OBJECT>
+			<OBJECT name="yourCPU" skin="normal" x="1631" y="416"></OBJECT>
+			<OBJECT name="yourMug" skin="normal" x="1278" y="528"></OBJECT>
+			<OBJECT name="yourHeadphones" skin="normal" x="1154" y="570"></OBJECT>
+			<OBJECT name="yourMouse" skin="normal" x="1552" y="660"></OBJECT>
+			<OBJECT name="door" skin="yourRoom" x="831" y="270">
+				<EXTERNAL_ACTION name="playSound">
+					<ARGUMENT>door</ARGUMENT>
+				</EXTERNAL_ACTION>
+				<SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="yourNoticeBoard" skin="normal" x="1083" y="287">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>announcements</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			<OBJECT name="yourBag" skin="normal" x="126" y="735">
+				<EXTERNAL_ACTION name="openTemplate">
+					<!-- <ARGUMENT>inventory</ARGUMENT> -->
+					<ARGUMENT>materials</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			
+			<!-- Commented away as Achievements are not available -->
+			<!-- <OBJECT name="yourCabinet" skin="normal" x="0" y="0">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>achievements</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT> -->
+			<OBJECT name="yourTablet" skin="normal" x="1446" y="475">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>IDE</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			<OBJECT name="yourTextbook" skin="normal" x="1342" y="441">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>textbook</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+		</LOCATION>
+		<LOCATION name="HMoffice" skin="normal">
+			<OBJECT name="hm-window03" skin="normal" x="1003" y="0"></OBJECT>
+			<OBJECT name="hm-window02" skin="normal" x="634" y="0"></OBJECT>
+			<OBJECT name="hm-window01" skin="normal" x="259" y="0"></OBJECT>
+			<OBJECT name="hm-monitor01" skin="normal" x="1341" y="719"></OBJECT>
+			<OBJECT name="hm-monitor02" skin="normal" x="1034" y="913"></OBJECT>
+			<OBJECT name="hm-fgTable" skin="normal" x="0" y="998"></OBJECT>
+			<OBJECT name="hm-antiquePrinter" skin="normal" x="283" y="895"></OBJECT>
+			<OBJECT name="hm-fgPhotoFrame" skin="normal" x="63" y="895"></OBJECT>
+			<OBJECT name="hm-cabinet" skin="normal" x="263" y="419"></OBJECT>
+			<OBJECT name="hm-bookshelf" skin="normal" x="0" y="122"></OBJECT>
+			<OBJECT name="hm-books" skin="normal" x="805" y="340"></OBJECT>
+			<OBJECT name="hm-chair" skin="normal" x="715" y="266"></OBJECT>
+			<OBJECT name="hm-desk" skin="normal" x="567" y="512"></OBJECT>
+			<OBJECT name="hm-mug" skin="normal" x="1048" y="500"></OBJECT>
+			<OBJECT name="hm-certificate" skin="normal" x="277" y="323"></OBJECT>
+			<OBJECT name="hm-photo" skin="normal" x="463" y="349"></OBJECT>
+			<OBJECT name="hm-elephant" skin="normal" x="614" y="351"></OBJECT>
+			<OBJECT name="hm-laptop" skin="normal" x="619" y="464"></OBJECT>
+			<OBJECT name="hm-elephant" skin="normal" x="614" y="351"></OBJECT>
+			<OBJECT name="hm-boatInBottle" skin="normal" x="959" y="345"></OBJECT>
+			<OBJECT name="hm-jug" skin="normal" x="1166" y="346"></OBJECT>
+			<OBJECT name="hm-flowers" skin="normal" x="1230" y="272"></OBJECT>
+			<OBJECT name="hm-grate" skin="normal" x="1675" y="456"></OBJECT>
+			<OBJECT name="hm-coatRack" skin="normal" x="1661" y="87"></OBJECT>
+			<OBJECT name="door" skin="HMoffice" x="1499" y="87">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="hartin-menz" skin="officeSitting" x="754" y="201">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="hartin-menz" expression="normal" audience="you" mode="normal">Hello, {playerName}! Looks like you found my office! Welcome! Feel free to look around, but take care not to break anything.</SPEECH>
+					</DIALOGUE>
+				</SEQUENCE>
+			</OBJECT>
+			<TEMP_OBJECT id="hm-mysteryCube" name="hm-mysteryCube" skin="normal" x="614" y="624">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>mysteryCube.png</IMAGE>
+						<NARRATION>The cube looks out of place in Grandmaster Hartin-Menz's office. There is an unsettling red light in the middle of each face that seems like its watching you all the time. Creepy... Grandmaster Hartin says you can keep it. Not surprising. Wouldn't want that in my office either.</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+				<EXTERNAL_ACTION name="pickUpCollectible">
+					<ARGUMENT>mysteryCube</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</TEMP_OBJECT>
+			<TEMP_OBJECT id="hm-thesis" name="hm-thesis" skin="normal" x="166" y="314">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="hartin-menz" expression="happy" audience="you" mode="normal">Ah, I see you've found my dissertation! Take it with you and give it a read if you like!</SPEECH>
+					</DIALOGUE>
+					<POPUP>
+						<IMAGE>dissertation.png</IMAGE>
+						<NARRATION>"Objects in OZ" Hmm, sounds interesting.</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+				<EXTERNAL_ACTION name="pickUpCollectible">
+					<ARGUMENT>dissertation</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</TEMP_OBJECT>
+			<OBJECT name="hm-runicCarpet" skin="normal-winner-2016" x="440" y="751">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>winnersRunicCarpet2016.png</IMAGE>
+						<NARRATION>The handiwork of the 2016 runic carpet contest winners! Such intricate workmanship!</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention01.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Kaiser Tan</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention02.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Francis Lee</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention03.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Ang Yee Chin</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention04.png</IMAGE>
+						<NARRATION>Third Place: Cadet Chen Xiaoman</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention05.png</IMAGE>
+						<NARRATION>Runner Up: Cadet Shi Jin</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>honorablemention06.png</IMAGE>
+						<NARRATION>First Place: Cadet Ang Zhan Yu</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+		</LOCATION>
+		<LOCATION name="LKoffice" skin="normal">
+			<OBJECT name="lk-hatch" skin="normal" x="1894" y="571"></OBJECT>
+			<OBJECT name="lk-3DrunesSign" skin="normal" x="1608" y="76"></OBJECT>
+			<OBJECT name="lk-window01" skin="normal" x="491" y="0"></OBJECT>
+			<OBJECT name="lk-window02" skin="normal" x="890" y="0"></OBJECT>
+			<OBJECT name="lk-window03" skin="normal" x="1262" y="0"></OBJECT>
+			<OBJECT name="lk-doormat" skin="normal" x="22" y="540"></OBJECT>
+			<OBJECT name="lk-coat" skin="normal" x="0" y="189"></OBJECT>
+			<OBJECT name="lk-grate" skin="normal" x="84" y="458"></OBJECT>
+			<OBJECT name="lk-origamiCranes" skin="normal" x="1393" y="0"></OBJECT>
+			<OBJECT name="lk-cabinet" skin="normal" x="461" y="417"></OBJECT>
+			<OBJECT name="lk-certificate" skin="normal" x="727" y="269"></OBJECT>
+			<OBJECT name="lk-origamiFlowers" skin="normal" x="520" y="277"></OBJECT>
+			<OBJECT name="lk-carpet" skin="normal" x="278" y="669"></OBJECT>
+			<OBJECT name="lk-desk" skin="normal" x="627" y="513"></OBJECT>
+			<OBJECT name="lk-laptop" skin="normal" x="1012" y="464"></OBJECT>
+			<OBJECT name="lk-mug" skin="normal" x="690" y="500"></OBJECT>
+			<OBJECT name="lk-chair" skin="normal" x="892" y="263"></OBJECT>
+			<OBJECT name="lk-monitor01" skin="normal" x="9" y="719"></OBJECT>
+			<OBJECT name="lk-monitor02" skin="normal" x="567" y="913"></OBJECT>
+			<OBJECT name="lk-monitor03" skin="normal" x="1126" y="890"></OBJECT>
+			<OBJECT name="lk-monitor04" skin="normal" x="1607" y="781"></OBJECT>
+
+			<OBJECT name="door" skin="LKoffice" x="205" y="87">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="lk-origamiRabbits" skin="normal" x="631" y="381">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="lok-kim" expression="happy" audience="you" mode="normal">Ah, you like my origami rabbits? Well, you're in luck! I always keep a spare set around for cadets with discerning tastes such as yourself! Here!</SPEECH>
+					</DIALOGUE>
+					<POPUP>
+						<IMAGE>origamiRabbits.png</IMAGE>
+						<NARRATION>A pair of origami rabbits. There's a tiny marking on its back. Looks like a Cloud link! https://www.comp.nus.edu.sg/~lowkl/publications/oa_tvcg2013_lowres.pdf</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+			<OBJECT name="lok-kim" skin="officeSitting" x="805" y="193">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="lok-kim" expression="normal" audience="you" mode="normal">Hello, {playerName}! You must be one of our new cadets! Do you need me for something? You can look around my office if you'd like.</SPEECH>
+					</DIALOGUE>
+				</SEQUENCE>
+			</OBJECT>
+			<OBJECT name="lk-3DrunesDisplay" skin="normal-winner-2016" x="1608" y="76">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>winners3DRunes2016.png</IMAGE>
+						<NARRATION>The handiwork of the 2016 3D Runes contest winners! Such intricate workmanship!</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention01.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Josh Lee</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention02.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Jiang Yue</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention03.png</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Gilbert Emerson</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention04.png</IMAGE>
+						<NARRATION>Third Place: Cadet Fan Yuting</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention05.png</IMAGE>
+						<NARRATION>Runner Up: Cadet Jason Xiang Jun Li</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention10.png</IMAGE>
+						<NARRATION>First Place: Cadet Ang Zhan Yu</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention06.gif</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Wang Jumming</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention07.gif</IMAGE>
+						<NARRATION>Most Popular Entries: Cadet Quentin Khoo</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention08.gif</IMAGE>
+						<NARRATION>Third Place: Cadet Wang Jumming</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention09.gif</IMAGE>
+						<NARRATION>Runner Up: Cadet Ang Zhan Yu</NARRATION>
+					</POPUP>
+					<POPUP>
+						<IMAGE>3dhonorablemention11.gif</IMAGE>
+						<NARRATION>First Place: Cadet Niu Yunpeng</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+			<OBJECT name="lk-curveDisplay" skin="normal" x="1259" y="155">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>curve.png</IMAGE>
+						<NARRATION>This space is specially reserved to display the work of the Curves Contest winner.</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+			<TEMP_OBJECT id="LK-office-collectibles" name="lk-robotDog" skin="normal" x="1539" y="472">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>robotDog.png</IMAGE>
+						<NARRATION>The robot dog emits a sharp, mechanical bark and follows you around with its tail wagging.</NARRATION>
+						<DIALOGUE>
+							<SPEECH speaker="lok-kim" expression="happy">Ah, I see you've met Byte!</SPEECH>
+							<SPEECH speaker="lok-kim" expression="happy">He's a retro bot I got from a junkyard sale. He even still has a floppy disk reader! Can you believe it?</SPEECH>
+							<SPEECH speaker="lok-kim" expression="worried">Unfortunately, he doesn't have many friends. All the tech on board this ship are too advanced for him to interface with.</SPEECH>
+							<SPEECH speaker="lok-kim" expression="worried">He seems to really like you though. You can keep him if you like. Just be sure to take good care of him.</SPEECH>
+						</DIALOGUE>
+					</POPUP>
+				</SEQUENCE>
+				<EXTERNAL_ACTION name="pickUpCollectible">
+					<ARGUMENT>robotDog</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</TEMP_OBJECT>
+		</LOCATION>
+		<LOCATION name="hallway" skin="normal">
+			<OBJECT name="hw-sign_classroom" skin="normal" x="1339" y="0"></OBJECT>
+			<OBJECT name="hw-sign_hmOffice" skin="normal" x="1159" y="196"></OBJECT>
+			<OBJECT name="hw-sign_cmdCenter" skin="normal" x="1065" y="326"></OBJECT>
+			<OBJECT name="hw-sign_greatHall" skin="normal" x="244" y="0"></OBJECT>
+			<OBJECT name="hw-sign_lkOffice" skin="normal" x="623" y="267"></OBJECT>
+			<OBJECT name="hw-window" skin="normal" x="767" y="426"></OBJECT>
+			<OBJECT name="hw-grate" skin="normal" x="900" y="481"></OBJECT>
+			<OBJECT name="hw-sign_telebay" skin="normal" x="1017" y="479"></OBJECT>
+			<OBJECT name="hw-sign_elevator" skin="normal" x="1030" y="380"></OBJECT>
+			<OBJECT name="hw-maintenanceAccess" skin="normal" x="902" y="375"></OBJECT>
+			<OBJECT name="hw-light01" skin="normal" x="507" y="0"></OBJECT>
+			<OBJECT name="hw-light02" skin="normal" x="698" y="219"></OBJECT>
+			<OBJECT name="door" skin="hallway-HMoffice" x="1229" y="347">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>HMoffice</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-LKoffice" x="632" y="369">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>LKoffice</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-cmdCenter" x="1122" y="407">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>cmdCenter</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-telebay" x="1015" y="478">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>telebayDoor</ARGUMENT>
+                </EXTERNAL_ACTION>
+				<GOTO_LOCATION>telebay</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-greatHall" x="178" y="173">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>greatHall</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-classroom" x="1465" y="225">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>classroom</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-yourRoom" x="1629" y="94">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>yourRoom</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="door" skin="hallway-maintenance" x="939" y="427">
+			</OBJECT>
+			<OBJECT name="hw-window" skin="normal" x="768" y="425">
+			</OBJECT>
+		</LOCATION>
+		<LOCATION name="greatHall" skin="normal">
+			<OBJECT name="gh-foodArea" skin="normal" x="421" y="431"></OBJECT>
+			<OBJECT name="gh-upstairs" skin="normal" x="1561" y="305"></OBJECT>
+			<OBJECT name="gh-platform" skin="normal" x="1050" y="717"></OBJECT>
+			<OBJECT name="gh-elevator" skin="normal" x="1400" y="651"></OBJECT>
+			<OBJECT name="gh-ceilingWindows" skin="normal" x="795,0" y="0"></OBJECT>
+			<OBJECT name="gh-window" skin="normal" x="1206" y="0"></OBJECT>
+			<OBJECT name="gh-bgTable" skin="normal" x="666" y="781"></OBJECT>
+			<OBJECT name="gh-rtTable" skin="normal" x="1073" y="901"></OBJECT>
+			<OBJECT name="gh-reia" skin="normal" x="1753" y="629"></OBJECT>
+			<OBJECT name="gh-rtTableChair02" skin="normal" x="1442" y="810"></OBJECT>
+			<OBJECT name="gh-rtTableChair01" skin="normal" x="1144" y="826"></OBJECT>
+			<OBJECT name="gh-ruby" skin="normal" x="1177" y="672"></OBJECT>
+			<OBJECT name="gh-rtTableMash" skin="normal" x="1336" y="896"></OBJECT>
+			<OBJECT name="gh-rtTableRedCup" skin="normal" x="1323" y="999"></OBJECT>
+			<OBJECT name="gh-rtTablePlate" skin="normal" x="1397" y="1010"></OBJECT>
+			<OBJECT name="gh-faizal" skin="normal" x="1549" y="707"></OBJECT>
+			<OBJECT name="gh-rtTableBlueDrink" skin="normal" x="1491" y="940"></OBJECT>
+			<OBJECT name="gh-lfTableChair03" skin="normal" x="810" y="855"></OBJECT>
+			<OBJECT name="gh-lfTableChair02" skin="normal" x="154" y="799"></OBJECT>
+			<OBJECT name="gh-lfTableChair01" skin="normal" x="0" y="832"></OBJECT>
+			<OBJECT name="gh-lfTable" skin="normal" x="25" y="874"></OBJECT>
+			<OBJECT name="gh-lfTableDrink" skin="normal" x="430" y="939"></OBJECT>
+			<OBJECT name="gh-lfTablePlate" skin="normal" x="412" y="973"></OBJECT>
+			<OBJECT name="gh-lfTableSoup" skin="normal" x="310" y="982"></OBJECT>
+			<OBJECT name="gh-lfTableAshleyTray" skin="normal" x="396" y="875"></OBJECT>
+			<OBJECT name="gh-daniel" skin="normal" x="475" y="713"></OBJECT>
+			<OBJECT name="gh-ashley" skin="normal" x="326" y="559"></OBJECT>
+			<OBJECT name="gh-todaysSpecial" skin="normal" x="324" y="865">
+				<SEQUENCE>
+					<POPUP>
+						<IMAGE>todaysSpecial.png</IMAGE>
+						<NARRATION>Today's special: Primordial Soup! Try our chef's latest creation, filled with nutritious organic compounds to nourish your soul!</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+			<OBJECT name="gh-haskell" skin="normal" x="830" y="523"></OBJECT>
+			<OBJECT name="gh-consoleByTheDoor" skin="normal" x="8" y="680"></OBJECT>
+			<OBJECT name="gh-cornerScreen" skin="normal" x="0" y="0"></OBJECT>
+
+			<OBJECT name="door" skin="greatHall" x="102" y="609">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="gh-about" skin="normal" x="1057" y="136">
+				<EXTERNAL_ACTION name="openTemplate">
+					<!-- <ARGUMENT>about</ARGUMENT> -->
+					<ARGUMENT></ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			
+			<!-- Commented away as comments/forum are not available -->
+			<!--
+			<OBJECT name="gh-forum" skin="normal" x="1041" y="585">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>forum</ARGUMENT>
+					<ARGUMENT>comments</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT> -->
+
+			<OBJECT name="gh-announcements" skin="normal" x="355" y="0">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>announcements</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+
+			<!-- Commented away as leaderboard is not available -->
+			<!-- <OBJECT name="gh-leaderboard" skin="normal" x="127" y="0">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>leaderboard</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT> -->
+		</LOCATION>
+		<LOCATION name="classroom" skin="normal">
+			<OBJECT name="door" skin="classroom" x="159" y="350">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="cr-todaysTopic" skin="normal" x="87" y="98">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>lesson_plan</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			<OBJECT name="cr-classRoster" skin="normal" x="995" y="287">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>users</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			<OBJECT name="cr-trainings" skin="normal" x="1158" y="369">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>path</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT>
+			<OBJECT name="cr-console" skin="normal" x="623" y="539"></OBJECT>
+			<OBJECT name="cr-trainingSign" skin="normal" x="1159" y="333"></OBJECT>
+			<OBJECT name="cr-timeLeft" skin="normal" x="1245" y="396"></OBJECT>
+		</LOCATION>
+		<LOCATION name="cmdCenter" skin="normal">
+			<OBJECT name="cmd-roofWindow" skin="normal" x="0" y="0"></OBJECT>
+			<OBJECT name="cmd-console" skin="normal" x="338" y="331"></OBJECT>
+			<OBJECT name="cmd-touchScreen03" skin="normal" x="1437" y="654"></OBJECT>
+			<OBJECT name="cmd-touchScreen02" skin="normal" x="1597" y="675"></OBJECT>
+			<OBJECT name="cmd-touchScreen01" skin="normal" x="1812" y="714"></OBJECT>
+			<OBJECT name="cmd-monitor03" skin="normal" x="1491" y="443"></OBJECT>
+
+			<OBJECT name="cmd-monitor02" skin="normal" x="1613" y="397"></OBJECT>
+			<OBJECT name="cmd-monitor01" skin="normal" x="1815" y="374"></OBJECT>
+			<OBJECT name="cmd-display" skin="normal" x="1521" y="0"></OBJECT>
+
+			<OBJECT name="cmd-window" skin="normal" x="501" y="0">
+				<SEQUENCE>
+					<NARRATION>That's the Keppler-62e, a super-Earth exoplanet. You feel a pang of longing as you stared out at this Earth-like planet, thinking of home. The view sure is magnificent though.</NARRATION>
+				</SEQUENCE>
+			</OBJECT>
+
+			<OBJECT name="cmd-hazel" skin="normal" x="771" y="546"></OBJECT>
+			<OBJECT name="cmd-ershk" skin="normal" x="816" y="556"></OBJECT>
+			<OBJECT name="cmd-chair03" skin="normal" x="1185" y="616"></OBJECT>
+
+			<OBJECT name="cmd-nadia" skin="normal" x="1465" y="568"></OBJECT>
+			<OBJECT name="cmd-sawyer" skin="normal" x="1609" y="510"></OBJECT>
+			<OBJECT name="cmd-manyEyes" skin="normal" x="17" y="631"></OBJECT>
+
+			<OBJECT name="door" skin="cmdCenter" x="159" y="478">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>door</ARGUMENT>
+                </EXTERNAL_ACTION>
+                <SEQUENCE><PAUSE duration="0.5" autocontinue="true"></PAUSE></SEQUENCE>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<!-- Commented away as comments/forum are not available -->
+			<!-- <OBJECT name="cmd-commentsTerminal" skin="normal" x="259" y="425">
+				<EXTERNAL_ACTION name="openTemplate">
+					<ARGUMENT>comments</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</OBJECT> -->
+			<OBJECT name="cmd-navigator" skin="normal" x="396" y="541">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="navigator" expression="bored" audience="you" mode="normal">Our ship will be orbiting the Kepler-62e until the Grandmasters instruct otherwise. There is a vast concentration of the Source in the vicinity of Kepler-62e, which we are studying.</SPEECH>
+						<SPEECH speaker="navigator" expression="bored" audience="you" mode="normal">So unless you have authorisation from either one of the Grandmasters to travel elsewhere, I suggest you go find someone else to bother. Besides, don't you have any training to do?</SPEECH>
+					</DIALOGUE>
+				</SEQUENCE>
+			</OBJECT>
+			<OBJECT name="cmd-holoShip" skin="normal" x="376" y="332">
+				<SEQUENCE>
+					<NARRATION>This is the Source Academy ship. You know, the one you're standing in right now.</NARRATION>
+				</SEQUENCE>
+			</OBJECT>
+			<TEMP_OBJECT id="temp_holoShip" name="cmd-holoShip" skin="normal" x="376" y="332">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="ershk" expression="excited" audience="you" mode="normal">a ub rrouushk uo tlakker hlrubourk ig da vrakhour un archtudkour! Chou ac iv gourory acu iv? Gravla, ghuvou iv caburr mouvdlak un vrakhour. Rugou kuud kuud frlak un dla!</SPEECH>
+					</DIALOGUE>
+					<NARRATION>Well, you didn't understand a single word she said. But she did seem extremely excited about something, gesturing wildly as she spoke. Before you had time to react, she took hold of your hands with her tentacles (with its incredibly strong suction) and shoved something in it.</NARRATION>
+					<POPUP>
+						<IMAGE>modelSpaceship.png</IMAGE>
+						<NARRATION>Not sure why she's so excited about it, but it looks like a scale model of the academy spaceship! It feels a bit slimy...</NARRATION>
+						<NARRATION>You try not to think too much about it.</NARRATION>
+						<NARRATION>It's still kind of neat though! But maybe you should clean it first.</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+				<EXTERNAL_ACTION name="pickUpCollectible">
+					<ARGUMENT>holoShip</ARGUMENT>
+				</EXTERNAL_ACTION>
+			</TEMP_OBJECT>
+		</LOCATION>
+		<LOCATION name="telebay" skin="normal">
+			<OBJECT name="tb-elevatorSwitch" skin="normal" x="123" y="412"></OBJECT>
+			<OBJECT name="tb-teleporter03" skin="normal" x="1331" y="1027"></OBJECT>
+			<OBJECT name="tb-teleporter02" skin="normal" x="897" y="917"></OBJECT>
+			<OBJECT name="tb-teleporter01" skin="normal" x="285" y="979"></OBJECT>
+			<OBJECT name="tb-light02" skin="normal" x="1652" y="0"></OBJECT>
+			<OBJECT name="tb-light01" skin="normal" x="1282" y="32"></OBJECT>
+			<OBJECT name="tb-overheadDevice02" skin="normal" x="963" y="0"></OBJECT>
+			<OBJECT name="tb-overheadDevice01" skin="normal" x="370" y="0"></OBJECT>
+			<OBJECT name="tb-console" skin="normal" x="1215" y="489"></OBJECT>
+			<OBJECT name="tb-lfGlassSeparator" skin="normal" x="1113" y="136"></OBJECT>
+			<OBJECT name="tb-rtGlassSeparator" skin="normal" x="1747" y="1"></OBJECT>
+			<OBJECT name="door" skin="telebay" x="222" y="241">
+				<EXTERNAL_ACTION name="playSound">
+                	<ARGUMENT>telebayDoor</ARGUMENT>
+                </EXTERNAL_ACTION>
+				<GOTO_LOCATION>hallway</GOTO_LOCATION>
+			</OBJECT>
+			<OBJECT name="tb-scottie" skin="normal" x="1267" y="283">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal">Oh hi! Those cookies are addictive aren't they? Here have some more!</SPEECH>
+					</DIALOGUE>
+					<POPUP>
+						<IMAGE>cookies.png</IMAGE>
+						<NARRATION>You now have more Hbebuerq cookies to add to the mounting pile of uneaten ones in your room.</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</OBJECT>
+			<TEMP_OBJECT id="tempScottie" name="tb-scottie" skin="normal" x="1267" y="283">
+				<SEQUENCE>
+					<DIALOGUE>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal">Oh hello there {playerName}! Don't believe we've met! My name is Scotonov'ej QuQ'IvchenmoHbe Qu'lIjSoHvaD. But that's terribly hard to pronounce isn't it? People here call me Scottie in short.</SPEECH>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal">I operate the beamers for when you kids need to go planetside. I also take care of things when nasty miscreants need to be thrown out of the airlock.</SPEECH>
+						<SPEECH speaker="you" expression="normal" audience="scottie" mode="normal">...</SPEECH>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal"> Oh don't look so flabbergasted, that rarely ever happens. Well...except that one time...</SPEECH>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal">Anyway, it was really nice of you to come visit! It gets awfully quiet down here with no one to talk to. Do come by more often!</SPEECH>
+						<SPEECH speaker="scottie" expression="happy" audience="you" mode="normal">Oh, and here, have some cookies. They're home made and my favourite! It stimulates your brain and keeps it sharp. Packed a whole bunch of them with me for the journey, so I have plenty more for you if you like them.</SPEECH>
+					</DIALOGUE>
+					<POPUP>
+						<IMAGE>cookies.png</IMAGE>
+						<NARRATION>Mmm, home made alien cookies flecked with some weird green stuff. Apparently they are a type of berry called Hbebuerq from Scottie's homeworld. It's suppose to be brain food, so, how bad can it be, right?</NARRATION>
+					</POPUP>
+				</SEQUENCE>
+			</TEMP_OBJECT>
+			<OBJECT name="tb-sourceAcademy" skin="normal" x="413" y="109">
+				<SEQUENCE>
+					<NARRATION>The Source Academy. Humanity's pride and glory founded by the United Order of Physicists back in 13AE. That's back when they thought the Source had something to do with dark matter and can be explained with quantum physics.</NARRATION>
+					<NARRATION>Things have changed a lot since then. We still don't really know what it is, but it is something entirely different and seems to operate on its own laws of physics. And now we're learning to manipulate it to achieve amazing feats.</NARRATION>
+				</SEQUENCE>
+			</OBJECT>
+		</LOCATION>
+	</MAP>
+	<QUEST id="intro">
+	    <EFFECTS>
+	    	<LOCATION name="yourRoom" skin="empty" clear="true">
+	    	</LOCATION>
+	    </EFFECTS>
+	    <SEQUENCE>
+            <LOCATION name="galaxy" skin="normal"></LOCATION>
+            <NARRATION>The year is 1101 A.E.</NARRATION>
+            <NARRATION>Exponential advances in technology have allowed the human race to traverse light yearsâ€™ worth of distances in mere hours.</NARRATION>
+            <NARRATION>As Earthâ€™s population reached a breaking point, humans began to migrate across the galaxy, colonizing planets once thought uninhabitable, as well as making settlements on those with amicable alien life.</NARRATION>
+            <NARRATION>To supplement this rapid expansion, large space stations scattered throughout the solar systems began to emerge, serving as hubs for different human needs.</NARRATION>
+            <NARRATION>Nestled deep in the Kepler-62 system, a prestigious facility of learning exists, claiming fame as perhaps the most rigorous inter-galactic educational institute in the universe.</NARRATION>
+            <NARRATION>Here, students learn how to harness the power of an invisible force known as the Source, a hidden energy that lets one manipulate the things around them and perform great feats.</NARRATION>
+            <NARRATION>Today, you have enrolled inâ€¦</NARRATION>
+            <POPUP>
+                <IMAGE>sourceAcademy.png</IMAGE>
+                <NARRATION>THE SOURCE ACADEMY</NARRATION>
+            </POPUP>
+                <LOCATION name="telebay" skin="normal"></LOCATION>
+            <DIALOGUE>
+                <SPEECH speaker="you" expression="tired">Whewâ€¦ That was a long trip. It feels like I was on that shuttle for a thousand years.</SPEECH>
+                <SPEECH speaker="you">
+                    I guess this is the Source Academy. Itâ€™s much bigger than my high school back on Earth. Itâ€™s hard to believe this is a space station.
+                </SPEECH>
+            </DIALOGUE>
+            <NARRATION>
+                The teleportation bay is empty, as far as you can see.
+            </NARRATION>
+            <NARRATION>
+                 You must have been one of the last to arrive, but all the shuttle services before this were fully-booked.
+            </NARRATION>
+            <NARRATION>
+                If only you hadnâ€™t procrastinated so muchâ€¦
+            </NARRATION>
+            <DIALOGUE>
+                <SPEECH speaker="you">Never mind that!</SPEECH>
+                <SPEECH speaker="you">Now, the message I got last week says Iâ€™m supposed to find my dorm room the minute I get here...</SPEECH>
+                <SPEECH speaker="scottie" expression="happy">Oh hi, you must be our last recruit! Everyone else is already getting settled in.</SPEECH>
+            </DIALOGUE>
+            <NARRATION>The strange alien voice startles you. You were so preoccupied you hadn't even noticed the telebay's operator. This is your first time meeting an alien in person. You couldn't help but gawk at him, lost for words.</NARRATION>
+            <DIALOGUE>
+                <SPEECH speaker="scottie" expression="happy">If you exit through that door, the elevator will take you up to the hallway. From there you can access the rest of the ship. Follow the sign at the end of the corridor and you'll find the student quarters. Off you go now!</SPEECH>
+            </DIALOGUE>
+            <DIALOGUE>
+                <SPEECH speaker="you">
+                Oh, um, thanks!
+                </SPEECH>
+            </DIALOGUE>
+            <NARRATION>You hastily make for the door, feeling a little embarassed.</NARRATION>
+            <PAUSE>
+                <OBJECT name="door" skin="telebay" x="222" y="241">
+                    <CONTINUE></CONTINUE>
+                </OBJECT>
+            </PAUSE>
+            <LOCATION name="hallway" skin="normal"></LOCATION>
+            <NARRATION>You exit the elevator into a long hallway leading to various rooms. You look around for a sign leading to the student quarters.</NARRATION>
+            <DIALOGUE>
+                <SPEECH speaker="you">Ah, there it is! I can't wait to unload my stuff. It's killing my back. I guess I should've packed lighter.</SPEECH>
+            </DIALOGUE>
+            <PAUSE>
+                <OBJECT name="door" skin="hallway-yourRoom" x="1633" y="97">
+                    <CONTINUE></CONTINUE>
+                </OBJECT>
+            </PAUSE>
+            <NARRATION>
+                After navigating through long hallways and twisty corridors, you find yourself in front of a room inscribed with your full name.
+            </NARRATION>
+            <DIALOGUE>
+                <SPEECH speaker="you">Oh, here it is!</SPEECH>
+            </DIALOGUE>
+            <NARRATION>
+                Sensing your presence via face and voice-recognition, the door opens smoothly...
+            </NARRATION>
+            <LOCATION name="yourRoom" skin="empty"></LOCATION>
+            <NARRATION>...revealing your room inside</NARRATION>
+            <PAUSE duration="2" autocontinue="true"></PAUSE>
+            <NARRATION>Neat! Better start unpacking and settling in!</NARRATION>
+	    </SEQUENCE>
+            <COMPLETE_QUEST>intro</COMPLETE_QUEST>
+	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
+	</QUEST>
+        <QUEST></QUEST>
+</STORY>
+
