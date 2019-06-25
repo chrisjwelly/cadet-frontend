@@ -93,6 +93,9 @@
 			</OBJECT>
 			<OBJECT name="hartin-menz" skin="officeSitting" x="754" y="201">
 				<SEQUENCE>
+					<EXTERNAL_ACTION name="playSound">
+                				<ARGUMENT>telebayDoor</ARGUMENT>
+               				</EXTERNAL_ACTION>
 					<DIALOGUE>
 						<SPEECH speaker="hartin-menz" expression="normal" audience="you" mode="normal">Hello, {playerName}! Looks like you found my office! Welcome! Feel free to look around, but take care not to break anything.</SPEECH>
 					</DIALOGUE>
