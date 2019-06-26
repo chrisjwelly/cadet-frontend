@@ -515,7 +515,7 @@
 	</MAP>
 	<QUEST id="intro">
 	    <EFFECTS>
-	    	<LOCATION name="yourRoom" skin="empty" clear="false">
+	    	<LOCATION name="yourRoom" skin="empty" clear="true">
 	    	</LOCATION>
 	    </EFFECTS>
 	    <SEQUENCE>
@@ -542,9 +542,6 @@
                 <SPEECH speaker="you">Oh, here it is!</SPEECH>
             </DIALOGUE>
             <LOCATION name="yourRoom" skin="empty"></LOCATION>
-			<NARRATION>...revealing your room inside</NARRATION>
-            <PAUSE duration="2" autocontinue="true"></PAUSE>
-            <NARRATION>Neat! Better start unpacking and settling in!</NARRATION>
 	    </SEQUENCE>
             <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
