@@ -96,7 +96,7 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     } else if (story === 'mission-1') {
       console.log("Initialize else if story === mission-1 in create-initializer.js");
       StoryXMLPlayer.loadStory('spaceship', function () { 
-        StoryXMLPlayer.loadStory('mission-1', function() { })
+        StoryXMLPlayer.loadStory('mission-2', function() { })
       })
         //StoryXMLPlayer.loadStory('mission-1', function () { })
       //})
