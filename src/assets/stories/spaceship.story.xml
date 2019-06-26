@@ -539,7 +539,7 @@
             <DIALOGUE>
                 <SPEECH speaker="you">Oh, here it is!</SPEECH>
             </DIALOGUE>
-            <LOCATION name="yourRoom" skin="normal"></LOCATION>
+            <LOCATION name="yourRoom" skin="empty"></LOCATION>
 	    </SEQUENCE>
             <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
