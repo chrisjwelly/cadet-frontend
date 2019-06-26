@@ -542,6 +542,7 @@
                 <SPEECH speaker="you">Oh, here it is!</SPEECH>
             </DIALOGUE>
             <LOCATION name="yourRoom" skin="empty"></LOCATION>
+			<NARRATION>...revealing your room inside</NARRATION>
 	    </SEQUENCE>
             <COMPLETE_QUEST>intro</COMPLETE_QUEST>
 	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
