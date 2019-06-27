@@ -95,9 +95,14 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
       alert('Next contest: 3D Rune')
     } else if (story === 'mission-1') {
       console.log("Initialize else if story === mission-1 in create-initializer.js");
+      // spaceship followed by mission-2
+      /*
       StoryXMLPlayer.loadStory('spaceship', function () { 
         StoryXMLPlayer.loadStory('mission-2', function() { })
       })
+      */
+      // spaceship only
+      StoryXMLPlayer.loadStory('spaceship', function() {} )
         //StoryXMLPlayer.loadStory('mission-1', function () { })
       //})
     } else if (willPlayOpening) {
