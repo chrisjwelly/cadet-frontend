@@ -514,6 +514,6 @@
 		</LOCATION>
 	</MAP>
 
-	<QUEST></QUEST>
+	<QUEST id="intro"></QUEST>
     <QUEST></QUEST>
 </STORY>
