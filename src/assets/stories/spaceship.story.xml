@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <STORY id="spaceship" type="normal">
 	<MAP>
+        <LOCATION name="galaxy" skin="normal"></LOCATION>
 		<LOCATION name="yourRoom" skin="normal">
 			<OBJECT name="yourLight02" skin="normal" x="441" y="243"></OBJECT>
 			<OBJECT name="yourLight01" skin="normal" x="373" y="136"></OBJECT>
