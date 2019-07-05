@@ -22,7 +22,7 @@ export function* mockBackendSaga(): SagaIterator {
       name: 'DevStaff',
       role: 'staff',
       story: {
-        story: 'mission-1',
+        story: 'mission-2',
         playStory: true
       },
       grade: 0

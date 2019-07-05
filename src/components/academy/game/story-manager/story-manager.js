@@ -68,15 +68,18 @@ export function unlockFirstQuest(storyId, callback) {
 }
 
 export function loadStory(storyXML, callback, startLocation) {
+  console.log("inside loadStory1");
   if (loadedStories[storyXML]) {
     return;
   }
+  console.log("inside loadStory2");
   loadStoryXML([storyXML], true, function() {
     if (startLocation) {
       LocationManager.changeStartLocation(startLocation);
     }
     unlockFirstQuest(storyXML, LocationManager.verifyGotoStart(callback));
   });
+  console.log("inside loadStory3");
 }
 
 export function loadStoryWithoutFirstQuest(storyXML, callback, startLocation) {
@@ -123,7 +126,7 @@ export function loadStoryXML(storyXMLs, willSave, callback) {
       downloadRequestSent[curId] = true;
       $.ajax({
         type: 'GET',
-        url: (curId === 'spaceship')
+        url: (curId === 'default' || curId === 'opening' || curId === 'mission-0')
                ? Constants.storyXMLPathTest + curId + '.story.xml' 
                : Constants.storyXMLPath + curId + '.story.xml',
         dataType: 'xml',

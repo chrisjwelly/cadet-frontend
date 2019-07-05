@@ -90,24 +90,28 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     if (typeof Storage !== 'undefined') {
       // Code for localStorage/sessionStorage.
       savedLocation = localStorage.cs1101s_source_academy_location;
+      console.log("Saved location: " + savedLocation)
     }
     if (story === 'contest-3.3') {
       alert('Next contest: 3D Rune')
     } else if (story === 'mission-1') {
       console.log("Initialize else if story === mission-1 in create-initializer.js");
       // spaceship followed by mission-2
-      /*
       StoryXMLPlayer.loadStory('spaceship', function () { 
-        StoryXMLPlayer.loadStory('mission-2', function() { })
+        console.log("test");
+        StoryXMLPlayer.loadStory('mission-1', function() { })
       })
-      */
       // spaceship only
+      /*
       StoryXMLPlayer.loadStory('spaceship', function() {} )
         //StoryXMLPlayer.loadStory('mission-1', function () { })
       //})
+      */
     } else if (willPlayOpening) {
+      console.log("Is this willPlayOpening being called");
       StoryXMLPlayer.loadStory(story, function () { }, savedLocation);
     } else {
+      console.log("Or is the else block being called?");
       StoryXMLPlayer.loadStoryWithoutFirstQuest(story, function () { }, savedLocation)
     }
   }
