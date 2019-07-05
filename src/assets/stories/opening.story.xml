@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<STORY type="normal" dependencies="spaceship">
+<STORY id="mission-0" type="mission" number="0" dependencies="spaceship">
 	<QUEST id="intro">
 	    <EFFECTS>
 		  	<LOCATION name="yourRoom" skin="empty" clear="true">
