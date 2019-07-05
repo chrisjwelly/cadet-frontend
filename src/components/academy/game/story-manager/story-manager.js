@@ -68,11 +68,7 @@ export function unlockFirstQuest(storyId, callback) {
 }
 
 export function loadStory(storyXML, callback, startLocation) {
-<<<<<<< Updated upstream
   console.log("inside loadStory1");
-=======
-  console.log("loadStory with 3 params");
->>>>>>> Stashed changes
   if (loadedStories[storyXML]) {
     return;
   }
@@ -130,7 +126,7 @@ export function loadStoryXML(storyXMLs, willSave, callback) {
       downloadRequestSent[curId] = true;
       $.ajax({
         type: 'GET',
-        url: (curId === 'default' || curId === 'opening' || curId === 'mission-0')
+        url: (curId === 'spaceship' || curId === 'opening' || curId === 'mission-0')
                ? Constants.storyXMLPathTest + curId + '.story.xml' 
                : Constants.storyXMLPath + curId + '.story.xml',
         dataType: 'xml',
