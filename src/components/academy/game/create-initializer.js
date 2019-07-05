@@ -87,8 +87,12 @@ export default function (StoryXMLPlayer, story, username, attemptedAll) {
     startGame(div, canvas);
     var willPlayOpening = !attemptedAll;
     var savedLocation;
+    console.log("Initialize's story: " + story);
+    console.log("Initialize's willPlayOpening: " + willPlayOpening);
+    console.log("Initialize's savedLocation: " + savedLocation);
     if (typeof Storage !== 'undefined') {
       // Code for localStorage/sessionStorage.
+      console.log("localstorage thingy: " + localStorage.cs1101s_source_academy_location);
       savedLocation = localStorage.cs1101s_source_academy_location;
       console.log("Saved location: " + savedLocation)
     }

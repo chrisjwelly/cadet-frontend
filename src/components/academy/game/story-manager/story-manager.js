@@ -68,7 +68,11 @@ export function unlockFirstQuest(storyId, callback) {
 }
 
 export function loadStory(storyXML, callback, startLocation) {
+<<<<<<< Updated upstream
   console.log("inside loadStory1");
+=======
+  console.log("loadStory with 3 params");
+>>>>>>> Stashed changes
   if (loadedStories[storyXML]) {
     return;
   }
