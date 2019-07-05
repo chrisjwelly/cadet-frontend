@@ -513,28 +513,4 @@
 			</OBJECT>
 		</LOCATION>
 	</MAP>
-	<QUEST id="intro">
-	    <EFFECTS>
-		  	<LOCATION name="yourRoom" skin="empty" clear="true">
-	    	</LOCATION>
-	    </EFFECTS>
-	    <SEQUENCE>
-            <LOCATION name="galaxy" skin="normal"></LOCATION>
-            <NARRATION>Welcome, you are looking at the XML file in Christian's branch (game-sounds in his fork)</NARRATION>
-            <LOCATION name="hallway" skin="normal"></LOCATION>
-            <PAUSE>
-                <OBJECT name="door" skin="hallway-yourRoom" x="1633" y="97">
-                    <CONTINUE></CONTINUE>
-                </OBJECT>
-            </PAUSE>
-            <DIALOGUE>
-                <SPEECH speaker="you">Oh, here it is!</SPEECH>
-            </DIALOGUE>
-            <LOCATION name="yourRoom" skin="empty"></LOCATION>
-			<NARRATION>...revealing your room inside</NARRATION>
-	    </SEQUENCE>
-            <COMPLETE_QUEST>intro</COMPLETE_QUEST>
-	    <CHANGE_START_LOCATION>yourRoom</CHANGE_START_LOCATION>
-	</QUEST>
-    <QUEST></QUEST>
 </STORY>
